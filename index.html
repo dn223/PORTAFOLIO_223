@@ -51,60 +51,73 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header
-        class="container mx-auto px-6 pt-12 md:pt-24 pb-0 flex flex-col lg:flex-row items-end justify-between relative z-10 min-h-[85vh] overflow-hidden">
+    <!-- Hero & Introduction Wrapper -->
+    <div class="relative w-full z-10">
+        
+        <!-- Sticky Image Container -->
+        <div class="absolute inset-0 pointer-events-none z-10">
+            <div class="sticky top-0 h-screen w-full flex justify-end items-end">
+                <div class="relative w-full md:w-3/4 lg:w-[55%] flex justify-end opacity-40 lg:opacity-100 right-0 lg:-right-20">
+                    
+                    <!-- Nombre flotante -->
+                    <div class="absolute bottom-2 lg:bottom-16 right-4 lg:right-24 z-30 text-right">
+                        <h3 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight whitespace-nowrap opacity-50 md:opacity-100"
+                            style="text-shadow: 0 0 15px rgba(255,255,255,0.4);">
+                            David Navarrete
+                        </h3>
+                    </div>
 
-        <!-- Left Content -->
-        <div
-            class="flex-1 flex flex-col items-start text-left max-w-5xl pb-16 lg:pb-32 z-20 relative mt-16 md:mt-24 lg:mt-32">
-            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-black text-white leading-[1.0] mb-4 uppercase tracking-tighter"
-                style="text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                SOFTWARE<br>
-                <span class="text-cyber-purple block mb-2"
-                    style="text-shadow: 0 0 40px rgba(147,51,234,0.4);">DEV</span>
-            </h1>
-            <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-black text-white leading-[1.0] mb-8 uppercase tracking-tighter"
-                style="text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                & Diseño <span class="text-cyber-green">UX</span> <span class="text-cyber-green">UI</span>
-            </h2>
-
-            <div class="flex items-start gap-4 mb-10 border-l-[3px] border-cyber-purple pl-6">
-                <p class="text-gray-300 text-lg md:text-xl leading-relaxed font-medium max-w-xl">
-                    Ingeniero en desarrollado de software con visión al futuro e <span class="text-cyber-purple font-bold">IA</span>.
-                    Me especializo en crear aplicaciones orientadas a objetos, transformando flujos complejos en
-                    interfaces intuitivas.
-                </p>
+                    <!-- Imagen de perfil -->
+                    <img src="./perfil.png" alt="David Navarrete"
+                        class="w-full h-auto max-h-[70vh] lg:max-h-[85vh] object-cover object-top"
+                        onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop'"
+                        style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);">
+                </div>
             </div>
-
-            <a href="#proyectos"
-                class="bg-cyber-red text-white font-bold px-8 py-4 rounded hover:bg-red-600 transition-all shadow-[0_0_20px_rgba(255,42,95,0.4)] flex items-center gap-4 text-lg hover:-translate-y-1">
-                COMENZAR <i
-                    class="fa-solid fa-chevron-right bg-black/20 rounded flex items-center justify-center w-6 h-6 text-sm text-white"></i>
-            </a>
         </div>
 
-        <!-- Right Content (Profile Image Cutout) -->
-        <div
-            class="absolute bottom-0 right-0 lg:-right-20 w-full md:w-3/4 lg:w-[55%] flex justify-end z-10 pointer-events-none opacity-40 lg:opacity-100">
+        <!-- Scrollable Content -->
+        <div class="container mx-auto px-6 relative z-20">
+            
+            <!-- Hero Section (Left Content) -->
+            <header class="flex flex-col items-start text-left max-w-5xl pt-16 md:pt-24 lg:pt-32 pb-16 lg:pb-32 min-h-[85vh] justify-center">
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-black text-white leading-[1.0] mb-4 uppercase tracking-tighter"
+                    style="text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    SOFTWARE<br>
+                    <span class="text-cyber-purple block mb-2"
+                        style="text-shadow: 0 0 40px rgba(147,51,234,0.4);">DEV</span>
+                </h1>
+                <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-black text-white leading-[1.0] mb-8 uppercase tracking-tighter"
+                    style="text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    & Diseño <span class="text-cyber-green">UX</span> <span class="text-cyber-green">UI</span>
+                </h2>
 
-            <!-- Nombre flotante -->
-            <div class="absolute bottom-2 lg:bottom-16 right-4 lg:right-24 z-30 text-right">
-                <h3 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight whitespace-nowrap opacity-50 md:opacity-100"
-                    style="text-shadow: 0 0 15px rgba(255,255,255,0.4);">
-                    David Navarrete
-                </h3>
-            </div>
+                <div class="flex items-start gap-4 mb-10 border-l-[3px] border-cyber-purple pl-6">
+                    <p class="text-gray-300 text-lg md:text-xl leading-relaxed font-medium max-w-xl">
+                        Ingeniero en desarrollado de software con visión al futuro e <span class="text-cyber-purple font-bold">IA</span>.
+                        Me especializo en crear aplicaciones orientadas a objetos, transformando flujos complejos en
+                        interfaces intuitivas.
+                    </p>
+                </div>
 
+                <a href="#proyectos"
+                    class="bg-cyber-red text-white font-bold px-8 py-4 rounded hover:bg-red-600 transition-all shadow-[0_0_20px_rgba(255,42,95,0.4)] flex items-center gap-4 text-lg hover:-translate-y-1 pointer-events-auto">
+                    COMENZAR <i
+                        class="fa-solid fa-chevron-right bg-black/20 rounded flex items-center justify-center w-6 h-6 text-sm text-white"></i>
+                </a>
+            </header>
 
-
-            <!-- Imagen de perfil -->
-            <img src="./perfil.png" alt="David Navarrete"
-                class="w-full h-auto max-h-[70vh] lg:max-h-[85vh] object-cover object-top"
-                onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop'"
-                style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);">
+            <!-- New Section: Hola yo soy -->
+            <section class="flex flex-col items-center lg:items-start text-center lg:text-left max-w-5xl pb-32 min-h-[75vh] justify-center">
+                <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-black leading-[1.0] uppercase tracking-tighter"
+                    style="text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <span class="text-white">HOLA!</span><br>
+                    <span class="text-cyber-purple block mt-4" style="text-shadow: 0 0 40px rgba(147,51,234,0.4);">yo soy</span>
+                </h2>
+            </section>
+            
         </div>
-    </header>
+    </div>
 
     <!-- Marquee Animado -->
     <section
@@ -175,17 +188,17 @@
                     </div>
                 </article>
 
-                <!-- Proyecto 2: ChemiSV -->
+                <!-- Proyecto 2: E-commerce Web -->
                 <article
                     class="glass-panel rounded-xl overflow-hidden flex flex-col md:flex-row-reverse animate-on-scroll-left flex-1"
                     style="transition-delay: 200ms;">
                     <div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
-                        <img src="./chemi_img_1.png" alt="ChemiSV"
+                        <img src="./chemi_img_1.png" alt="E-commerce Web"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 md:w-1/2 flex flex-col justify-center">
                         <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-2xl font-bold text-white text-glow-green">ChemiSV</h3>
+                            <h3 class="text-2xl font-bold text-white text-glow-green">E-commerce Web</h3>
                             <a href="https://github.com/tu-usuario/chemissv" target="_blank"
                                 class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-sm text-white hover:bg-cyber-green transition-all"
                                 title="Ver Repositorio">
@@ -193,8 +206,8 @@
                             </a>
                         </div>
                         <p class="text-gray-400 text-sm mb-6 flex-grow">
-                            Sistema de gestión de inventarios y cotizaciones para productos químicos, optimizado para
-                            operaciones B2B con un frontend reactivo.
+                            Plantilla funcional para tiendas en línea de negocios, optimizada para
+                            operaciones de venta e inventario con un frontend reactivo.
                         </p>
                         <div class="flex gap-3 mb-6">
                             <i class="devicon-php-plain text-2xl text-gray-400" title="PHP"></i>
@@ -331,7 +344,7 @@
                 class="group flex items-center justify-center w-20 h-20 rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:scale-110 hover:-translate-y-2 hover:bg-[#1877F2] hover:border-[#1877F2] shadow-lg hover:shadow-[#1877F2]/50">
                 <i class="fa-brands fa-facebook-f text-4xl text-gray-400 group-hover:text-white transition-colors"></i>
             </a>
-            <a href="https://discord.gg/DSQTQQce" target="_blank" rel="noopener noreferrer"
+            <a href="https://discordapp.com/users/424316107038523392" target="_blank" rel="noopener noreferrer"
                 class="group flex items-center justify-center w-20 h-20 rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:scale-110 hover:-translate-y-2 hover:bg-[#5865F2] hover:border-[#5865F2] shadow-lg hover:shadow-[#5865F2]/50">
                 <i class="fa-brands fa-discord text-4xl text-gray-400 group-hover:text-white transition-colors"></i>
             </a>
