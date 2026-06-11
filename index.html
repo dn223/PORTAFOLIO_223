@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Tech & Cyber</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-purple': '#9333ea',
+                        'cyber-green': '#22c55e',
+                        'cyber-red': '#ff2a5f',
+                        'cyber-blue': '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Devicon -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="antialiased min-h-screen flex flex-col overflow-x-hidden relative">
+
+    <!-- Background Pattern Tech Dots Global -->
+    <div class="fixed inset-0 pointer-events-none z-0 bg-[#0a0a0f]">
+        <div class="tech-dots-background absolute inset-0 opacity-20"></div>
+        <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(147,51,234,0.15),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,197,94,0.1),transparent_50%),radial-gradient(circle_at_20%_50%,rgba(59,130,246,0.15),transparent_50%)]">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 z-50 w-full pt-6">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#" class="hover:text-white transition-colors">Inicio</a>
+                <a href="#proyectos" class="hover:text-white transition-colors">Proyectos</a>
+                <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+        class="container mx-auto px-6 pt-12 md:pt-24 pb-0 flex flex-col lg:flex-row items-end justify-between relative z-10 min-h-[85vh] overflow-hidden">
+
+        <!-- Left Content -->
+        <div
+            class="flex-1 flex flex-col items-start text-left max-w-5xl pb-16 lg:pb-32 z-20 relative mt-16 md:mt-24 lg:mt-32">
+            <h1 class="text-6xl md:text-7xl lg:text-[7rem] font-black text-white leading-[1.0] mb-4 uppercase tracking-tighter"
+                style="text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                SOFTWARE<br>
+                <span class="text-cyber-purple block mb-2"
+                    style="text-shadow: 0 0 40px rgba(147,51,234,0.4);">DEV</span>
+            </h1>
+            <h2 class="text-6xl md:text-7xl lg:text-[7rem] font-black text-white leading-[1.0] mb-8 uppercase tracking-tighter"
+                style="text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                & Diseño <span class="text-cyber-green">UX</span> <span class="text-cyber-green">UI</span>
+            </h2>
+
+            <div class="flex items-start gap-4 mb-10 border-l-[3px] border-cyber-purple pl-6">
+                <p class="text-gray-300 text-lg md:text-xl leading-relaxed font-medium max-w-xl">
+                    Ingeniero en desarrollado de software con visión al futuro e <span class="text-cyber-purple font-bold">IA</span>.
+                    Me especializo en crear aplicaciones orientadas a objetos, transformando flujos complejos en
+                    interfaces intuitivas.
+                </p>
+            </div>
+
+            <a href="#proyectos"
+                class="bg-cyber-red text-white font-bold px-8 py-4 rounded hover:bg-red-600 transition-all shadow-[0_0_20px_rgba(255,42,95,0.4)] flex items-center gap-4 text-lg hover:-translate-y-1">
+                COMENZAR <i
+                    class="fa-solid fa-chevron-right bg-black/20 rounded flex items-center justify-center w-6 h-6 text-sm text-white"></i>
+            </a>
+        </div>
+
+        <!-- Right Content (Profile Image Cutout) -->
+        <div
+            class="absolute bottom-0 right-0 lg:-right-20 w-full md:w-3/4 lg:w-[55%] flex justify-end z-10 pointer-events-none opacity-40 lg:opacity-100">
+
+            <!-- Nombre flotante -->
+            <div class="absolute bottom-12 lg:bottom-16 right-4 lg:right-24 z-30 text-right">
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight whitespace-nowrap"
+                    style="text-shadow: 0 0 15px rgba(255,255,255,0.4);">
+                    David Navarrete
+                </h3>
+            </div>
+
+
+
+            <!-- Imagen de perfil -->
+            <img src="./perfil.png" alt="David Navarrete"
+                class="w-full h-auto max-h-[70vh] lg:max-h-[85vh] object-cover object-top"
+                onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop'"
+                style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);">
+        </div>
+    </header>
+
+    <!-- Marquee Animado -->
+    <section
+        class="w-full py-12 my-24 border-y border-white/5 bg-black/40 backdrop-blur-sm overflow-hidden relative z-10">
+        <div class="marquee-container">
+            <div class="marquee-content font-mono text-4xl text-gray-400">
+                <i class="devicon-nodejs-plain tech-icon"></i>
+                <i class="devicon-java-plain tech-icon"></i>
+                <i class="devicon-php-plain tech-icon"></i>
+                <i class="devicon-laravel-original tech-icon"></i>
+                <i class="devicon-mysql-plain tech-icon"></i>
+                <i class="devicon-python-plain tech-icon"></i>
+                <i class="devicon-html5-plain tech-icon"></i>
+                <i class="devicon-css3-plain tech-icon"></i>
+                <i class="devicon-javascript-plain tech-icon"></i>
+                <i class="devicon-tailwindcss-original tech-icon"></i>
+                <i class="devicon-nextjs-plain tech-icon"></i>
+                <i class="devicon-android-plain tech-icon"></i>
+                <i class="devicon-figma-plain tech-icon"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <main id="proyectos" class="container mx-auto px-6 pb-0 flex-grow relative z-10 scroll-mt-24">
+        <h2 class="text-3xl font-mono text-white mb-10 flex items-center gap-4">
+            <span class="text-cyber-blue">#</span> Mis_Proyectos
+            <div class="h-[1px] bg-white/10 flex-grow"></div>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- Left Column (Webs) -->
+            <div class="lg:col-span-2 flex flex-col gap-8 h-full">
+
+                <!-- Proyecto 1: Hub Universitario -->
+                <article
+                    class="glass-panel rounded-xl overflow-hidden flex flex-col md:flex-row animate-on-scroll-left flex-1">
+                    <div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+                        <img src="./hub_img_2.png" alt="Hub Universitario Dashboard"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-white text-glow-purple">Hub Universitario</h3>
+                            <a href="https://github.com/tu-usuario/notch-hub" target="_blank"
+                                class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-sm text-white hover:bg-cyber-purple transition-all"
+                                title="Ver Repositorio">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Plataforma de gestión académica y recursos para estudiantes de la UFG.
+                            Desarrollada en PHP y Laravel, optimizando procesos de aprendizaje y
+                            colaboración estudiantil en un entorno seguro.
+                        </p>
+                        <div class="flex gap-3 mb-6 text-2xl text-gray-400">
+                            <i class="devicon-html5-plain hover:text-[#E34F26] transition-colors" title="HTML5"></i>
+                            <i class="devicon-css3-plain hover:text-[#1572B6] transition-colors" title="CSS3"></i>
+                            <i class="devicon-javascript-plain hover:text-[#F7DF1E] transition-colors" title="JavaScript"></i>
+                            <i class="devicon-python-plain hover:text-[#3776AB] transition-colors" title="Python"></i>
+                            <i class="devicon-flask-original hover:text-white transition-colors" title="Flask"></i>
+                        </div>
+                        <a href="./notchhub.html"
+                            class="block w-full text-center py-2.5 bg-cyber-purple/20 border border-cyber-purple/50 text-cyber-purple hover:bg-cyber-purple hover:text-white rounded transition-all font-mono text-sm font-bold">
+                            Ver Detalles <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2: ChemiSV -->
+                <article
+                    class="glass-panel rounded-xl overflow-hidden flex flex-col md:flex-row-reverse animate-on-scroll-left flex-1"
+                    style="transition-delay: 200ms;">
+                    <div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+                        <img src="./chemi_img_1.png" alt="ChemiSV"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-white text-glow-green">ChemiSV</h3>
+                            <a href="https://github.com/tu-usuario/chemissv" target="_blank"
+                                class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-sm text-white hover:bg-cyber-green transition-all"
+                                title="Ver Repositorio">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Sistema de gestión de inventarios y cotizaciones para productos químicos, optimizado para
+                            operaciones B2B con un frontend reactivo.
+                        </p>
+                        <div class="flex gap-3 mb-6">
+                            <i class="devicon-php-plain text-2xl text-gray-400" title="PHP"></i>
+                            <i class="devicon-mysql-plain text-2xl text-gray-400" title="MySQL"></i>
+                            <i class="devicon-javascript-plain text-2xl text-gray-400" title="JavaScript"></i>
+                        </div>
+                        <a href="./chemissv.html"
+                            class="block w-full text-center py-2.5 bg-cyber-green/20 border border-cyber-green/50 text-cyber-green hover:bg-cyber-green hover:text-white rounded transition-all font-mono text-sm font-bold">
+                            Ver Detalles <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Right Column (App Vertical) -->
+            <div class="lg:col-span-1 flex flex-col h-full">
+                <!-- Proyecto 3: Recipes App -->
+                <article class="glass-panel rounded-xl overflow-hidden flex flex-col h-full animate-on-scroll-right">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-white text-glow-blue">Recipes App</h3>
+                        </div>
+
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Aplicación móvil nativa para Android que permite a los usuarios descubrir, guardar y
+                            compartir recetas de cocina. Incluye funcionalidades offline y sincronización en la nube.
+                        </p>
+
+                        <!-- Teléfono Celular Mockup Vertical -->
+                        <div
+                            class="relative w-full max-w-[220px] mx-auto mt-2 mb-6 flex flex-col items-center group-hover:-translate-y-2 transition-transform duration-500">
+                            <!-- Marco del teléfono -->
+                            <div
+                                class="relative w-full pt-[200%] border-4 border-gray-800 rounded-[2rem] bg-black overflow-hidden shadow-xl shadow-black/50">
+                                <!-- Notch -->
+                                <div class="absolute top-0 inset-x-0 h-6 bg-gray-800 rounded-b-xl w-1/2 mx-auto z-20">
+                                </div>
+                                <!-- Imagen/Pantalla -->
+                                <img src="./app_img_3.jpg" alt="Recipes App Splash"
+                                    class="absolute inset-0 w-full h-full object-cover z-10 opacity-80 group-hover:opacity-100 transition-opacity">
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3 justify-center mb-6">
+                            <i class="devicon-java-plain text-2xl text-gray-400" title="Java"></i>
+                            <i class="devicon-androidstudio-plain text-2xl text-gray-400" title="Android Studio"></i>
+                            <i class="devicon-sqlite-plain text-2xl text-gray-400" title="SQLite"></i>
+                        </div>
+
+                        <a href="./recipesapp.html"
+                            class="block w-full text-center py-2.5 bg-cyber-blue/20 border border-cyber-blue/50 text-cyber-blue hover:bg-cyber-blue hover:text-white rounded transition-all font-mono text-sm font-bold mt-6">
+                            Ver Detalles <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Bottom Row (CRUD) -->
+            <div class="lg:col-span-3 flex justify-center mt-4 lg:mt-0">
+                <div class="w-full lg:w-2/3">
+                    <!-- Proyecto 4: CRUD Laravel -->
+                    <article
+                        class="glass-panel rounded-xl overflow-hidden flex flex-col md:flex-row animate-on-scroll-up"
+                        style="transition-delay: 300ms;">
+                        <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-white text-glow-red">Sistema CRUD</h3>
+                                <a href="https://github.com/tu-usuario/crud-laravel" target="_blank"
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-sm text-white hover:bg-cyber-red transition-all"
+                                    title="Ver Repositorio">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-6 flex-grow">
+                                Un CRUD pequeño pero funcional desarrollado en Laravel con animaciones muy bonitas,
+                                optimizado para una gestión rápida y fluida de datos.
+                            </p>
+                            <div class="flex gap-3 mb-6">
+                                <i class="devicon-php-plain text-2xl text-gray-400" title="PHP"></i>
+                                <i class="devicon-laravel-original text-2xl text-gray-400" title="Laravel"></i>
+                                <i class="devicon-mysql-plain text-2xl text-gray-400" title="MySQL"></i>
+                            </div>
+                            <a href="./crudlaravel.html"
+                                class="block w-full text-center py-2.5 bg-cyber-red/20 border border-cyber-red/50 text-cyber-red hover:bg-cyber-red hover:text-white rounded transition-all font-mono text-sm font-bold">
+                                Ver Detalles <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+                            <img src="./crud_img_1.png" alt="CRUD Laravel"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Marquee Animado (Separador) -->
+    <section
+        class="w-full py-12 my-24 border-y border-white/5 bg-black/40 backdrop-blur-sm overflow-hidden relative z-10">
+        <div class="marquee-container">
+            <div class="marquee-content font-mono text-4xl text-gray-400">
+                <i class="devicon-nodejs-plain tech-icon"></i>
+                <i class="devicon-java-plain tech-icon"></i>
+                <i class="devicon-php-plain tech-icon"></i>
+                <i class="devicon-laravel-original tech-icon"></i>
+                <i class="devicon-mysql-plain tech-icon"></i>
+                <i class="devicon-python-plain tech-icon"></i>
+                <i class="devicon-html5-plain tech-icon"></i>
+                <i class="devicon-css3-plain tech-icon"></i>
+                <i class="devicon-javascript-plain tech-icon"></i>
+                <i class="devicon-tailwindcss-original tech-icon"></i>
+                <i class="devicon-nextjs-plain tech-icon"></i>
+                <i class="devicon-android-plain tech-icon"></i>
+                <i class="devicon-figma-plain tech-icon"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="container mx-auto px-6 pb-20 relative z-10 scroll-mt-24">
+        <h2 class="text-3xl font-mono text-white mb-16 flex items-center gap-4">
+            <span class="text-cyber-green">#</span> Contacto
+        </h2>
+
+        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 mb-20">
+            <a href="https://www.instagram.com/dn223_/" target="_blank" rel="noopener noreferrer"
+                class="group flex items-center justify-center w-20 h-20 rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:scale-110 hover:-translate-y-2 hover:bg-[#E1306C] hover:border-[#E1306C] shadow-lg hover:shadow-[#E1306C]/50">
+                <i class="fa-brands fa-instagram text-4xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://www.facebook.com/danvidnavarrete" target="_blank" rel="noopener noreferrer"
+                class="group flex items-center justify-center w-20 h-20 rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:scale-110 hover:-translate-y-2 hover:bg-[#1877F2] hover:border-[#1877F2] shadow-lg hover:shadow-[#1877F2]/50">
+                <i class="fa-brands fa-facebook-f text-4xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://discord.gg/DSQTQQce" target="_blank" rel="noopener noreferrer"
+                class="group flex items-center justify-center w-20 h-20 rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:scale-110 hover:-translate-y-2 hover:bg-[#5865F2] hover:border-[#5865F2] shadow-lg hover:shadow-[#5865F2]/50">
+                <i class="fa-brands fa-discord text-4xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/david-navarrete-b19366315/" target="_blank" rel="noopener noreferrer"
+                class="group flex items-center justify-center w-20 h-20 rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:scale-110 hover:-translate-y-2 hover:bg-[#0A66C2] hover:border-[#0A66C2] shadow-lg hover:shadow-[#0A66C2]/50">
+                <i class="fa-brands fa-linkedin-in text-4xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://github.com/dn223" target="_blank" rel="noopener noreferrer"
+                class="group flex items-center justify-center w-20 h-20 rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:scale-110 hover:-translate-y-2 hover:bg-[#333] hover:border-gray-500 shadow-lg hover:shadow-[#333]/50">
+                <i class="fa-brands fa-github text-4xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+        </div>
+
+        <p class="text-center text-gray-500 font-mono text-sm font-medium">Portafolio David Navarrete 2026 &copy;</p>
+    </section>
+
+    <!-- Scripts -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
