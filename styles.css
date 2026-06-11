@@ -213,16 +213,29 @@ body {
 
 /* Bubble swap classes triggered by JS */
 #bubble-1.swapped {
-    transform: translate(60vw, 10vh) rotate(15deg);
+    transform: translateY(10vh) rotate(15deg);
 }
 #bubble-2.swapped {
-    transform: translate(-60vw, -10vh) rotate(-15deg);
+    transform: translateY(10vh) rotate(-15deg);
 }
 @media (min-width: 1024px) {
     #bubble-1.swapped {
-        transform: translate(20vw, 15vh) rotate(15deg) scale(1.1);
+        transform: translateY(6rem) rotate(15deg) scale(1.1);
     }
     #bubble-2.swapped {
-        transform: translate(-20vw, -15vh) rotate(-15deg) scale(0.9);
+        transform: translateY(6rem) rotate(-15deg) scale(1.1);
     }
+}
+
+/* Subtle floating for social icons */
+@keyframes floatSubtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+.floating-animation-subtle {
+    animation: floatSubtle 4s ease-in-out infinite;
+}
+
+.transition-custom {
+    transition: background-color 1s, border-color 1s, color 1s, box-shadow 1s;
 }

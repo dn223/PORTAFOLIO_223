@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scroll Animation Observer
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.15
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.05
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -76,26 +76,22 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Observer for Hola section animations (Text, Profile Name, Bubbles, Image Opacity)
+    // Observer for Hola section animations (Text, Bubbles, Image Opacity)
     const holaSection = document.getElementById('hola-section');
     const holaText = document.getElementById('hola-text');
-    const profileName = document.getElementById('profile-name');
     const bubble1 = document.getElementById('bubble-1');
     const bubble2 = document.getElementById('bubble-2');
     const b1Inner = document.getElementById('bubble-1-inner');
     const b2Inner = document.getElementById('bubble-2-inner');
     const profileImageContainer = document.getElementById('profile-image-container');
 
-    if (holaSection && holaText && profileName && bubble1 && bubble2 && profileImageContainer) {
+    if (holaSection && holaText && bubble1 && bubble2 && profileImageContainer) {
         const holaObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Show text and name
+                    // Show text
                     holaText.classList.remove('opacity-0', '-translate-x-20');
                     holaText.classList.add('opacity-100', 'translate-x-0');
-                    
-                    profileName.classList.remove('opacity-0', 'translate-x-10');
-                    profileName.classList.add('opacity-100', 'translate-x-0');
 
                     // Image opacity on mobile
                     profileImageContainer.classList.remove('opacity-40');
@@ -115,12 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         b2Inner.classList.add('bg-cyber-red/20', 'border-cyber-red/50', 'text-white', 'shadow-[0_0_20px_rgba(236,72,153,0.4)]');
                     }
                 } else {
-                    // Hide text and name
+                    // Hide text
                     holaText.classList.remove('opacity-100', 'translate-x-0');
                     holaText.classList.add('opacity-0', '-translate-x-20');
-                    
-                    profileName.classList.remove('opacity-100', 'translate-x-0');
-                    profileName.classList.add('opacity-0', 'translate-x-10');
 
                     // Revert Image opacity on mobile
                     profileImageContainer.classList.add('opacity-40');
@@ -141,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
 
         holaObserver.observe(holaSection);
     }
