@@ -75,4 +75,43 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.animate-on-scroll-left, .animate-on-scroll-right, .animate-on-scroll-up').forEach(el => {
         observer.observe(el);
     });
+
+    // Observer for Hola section animations (Text, Profile Name, Bubbles)
+    const holaSection = document.getElementById('hola-section');
+    const holaText = document.getElementById('hola-text');
+    const profileName = document.getElementById('profile-name');
+    const bubble1 = document.getElementById('bubble-1');
+    const bubble2 = document.getElementById('bubble-2');
+
+    if (holaSection && holaText && profileName && bubble1 && bubble2) {
+        const holaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Show text and name
+                    holaText.classList.remove('opacity-0', '-translate-x-20');
+                    holaText.classList.add('opacity-100', 'translate-x-0');
+                    
+                    profileName.classList.remove('opacity-0', 'translate-x-10');
+                    profileName.classList.add('opacity-100', 'translate-x-0');
+
+                    // Swap bubbles
+                    bubble1.classList.add('swapped');
+                    bubble2.classList.add('swapped');
+                } else {
+                    // Hide text and name
+                    holaText.classList.remove('opacity-100', 'translate-x-0');
+                    holaText.classList.add('opacity-0', '-translate-x-20');
+                    
+                    profileName.classList.remove('opacity-100', 'translate-x-0');
+                    profileName.classList.add('opacity-0', 'translate-x-10');
+
+                    // Reset bubbles
+                    bubble1.classList.remove('swapped');
+                    bubble2.classList.remove('swapped');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        holaObserver.observe(holaSection);
+    }
 });

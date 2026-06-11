@@ -194,3 +194,35 @@ body {
 .carousel-btn.next {
     right: 15px;
 }
+
+/* Floating Animations for Bubbles */
+@keyframes floatBubble1 {
+    0%, 100% { margin-top: 0; }
+    50% { margin-top: -15px; }
+}
+@keyframes floatBubble2 {
+    0%, 100% { margin-top: 0; }
+    50% { margin-top: 15px; }
+}
+.floating-animation-1 {
+    animation: floatBubble1 4s ease-in-out infinite;
+}
+.floating-animation-2 {
+    animation: floatBubble2 5s ease-in-out infinite;
+}
+
+/* Bubble swap classes triggered by JS */
+#bubble-1.swapped {
+    transform: translate(60vw, 10vh) rotate(15deg);
+}
+#bubble-2.swapped {
+    transform: translate(-60vw, -10vh) rotate(-15deg);
+}
+@media (min-width: 1024px) {
+    #bubble-1.swapped {
+        transform: translate(20vw, 15vh) rotate(15deg) scale(1.1);
+    }
+    #bubble-2.swapped {
+        transform: translate(-20vw, -15vh) rotate(-15deg) scale(0.9);
+    }
+}

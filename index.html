@@ -59,8 +59,16 @@
             <div class="sticky top-0 h-screen w-full flex justify-end items-end">
                 <div class="relative w-full md:w-3/4 lg:w-[55%] flex justify-end opacity-40 lg:opacity-100 right-0 lg:-right-20">
                     
+                    <!-- Burbujas Flotantes -->
+                    <div id="bubble-1" class="absolute top-[10%] left-[10%] z-20 w-16 h-16 rounded-full bg-cyber-purple/20 border border-cyber-purple/50 backdrop-blur-md flex items-center justify-center text-white font-mono font-bold text-xl shadow-[0_0_20px_rgba(147,51,234,0.4)] floating-animation-1 transition-transform duration-[1500ms] ease-in-out pointer-events-auto">
+                        &lt;/&gt;
+                    </div>
+                    <div id="bubble-2" class="absolute top-[30%] right-[10%] z-20 w-16 h-16 rounded-full bg-cyber-green/20 border border-cyber-green/50 backdrop-blur-md flex items-center justify-center text-white text-xl shadow-[0_0_20px_rgba(34,197,94,0.4)] floating-animation-2 transition-transform duration-[1500ms] ease-in-out pointer-events-auto">
+                        <i class="fa-solid fa-paintbrush"></i>
+                    </div>
+
                     <!-- Nombre flotante -->
-                    <div class="absolute bottom-2 lg:bottom-16 right-4 lg:right-24 z-30 text-right">
+                    <div id="profile-name" class="absolute bottom-2 lg:bottom-16 right-4 lg:right-24 z-30 text-right opacity-0 transition-all duration-[1500ms] transform translate-x-10">
                         <h3 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight whitespace-nowrap opacity-50 md:opacity-100"
                             style="text-shadow: 0 0 15px rgba(255,255,255,0.4);">
                             David Navarrete
@@ -108,12 +116,14 @@
             </header>
 
             <!-- New Section: Hola yo soy -->
-            <section class="flex flex-col items-center lg:items-start text-center lg:text-left max-w-5xl pb-32 min-h-[75vh] justify-center">
-                <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-black leading-[1.0] uppercase tracking-tighter"
-                    style="text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                    <span class="text-white">HOLA!</span><br>
-                    <span class="text-cyber-purple block mt-4" style="text-shadow: 0 0 40px rgba(147,51,234,0.4);">yo soy</span>
-                </h2>
+            <section id="hola-section" class="flex flex-col items-center lg:items-start text-center lg:text-left max-w-5xl pb-32 min-h-[75vh] justify-start pt-12 md:pt-20 lg:justify-center lg:pt-0">
+                <div id="hola-text" class="opacity-0 transform -translate-x-20 transition-all duration-[1500ms] ease-out">
+                    <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-black leading-[1.0] uppercase tracking-tighter"
+                        style="text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        <span class="text-white">HOLA!</span><br>
+                        <span class="text-cyber-purple block mt-4" style="text-shadow: 0 0 40px rgba(147,51,234,0.4);">yo soy</span>
+                    </h2>
+                </div>
             </section>
             
         </div>
