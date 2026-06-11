@@ -76,14 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Observer for Hola section animations (Text, Profile Name, Bubbles)
+    // Observer for Hola section animations (Text, Profile Name, Bubbles, Image Opacity)
     const holaSection = document.getElementById('hola-section');
     const holaText = document.getElementById('hola-text');
     const profileName = document.getElementById('profile-name');
     const bubble1 = document.getElementById('bubble-1');
     const bubble2 = document.getElementById('bubble-2');
+    const b1Inner = document.getElementById('bubble-1-inner');
+    const b2Inner = document.getElementById('bubble-2-inner');
+    const profileImageContainer = document.getElementById('profile-image-container');
 
-    if (holaSection && holaText && profileName && bubble1 && bubble2) {
+    if (holaSection && holaText && profileName && bubble1 && bubble2 && profileImageContainer) {
         const holaObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -94,9 +97,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     profileName.classList.remove('opacity-0', 'translate-x-10');
                     profileName.classList.add('opacity-100', 'translate-x-0');
 
+                    // Image opacity on mobile
+                    profileImageContainer.classList.remove('opacity-40');
+                    profileImageContainer.classList.add('opacity-100');
+
                     // Swap bubbles
                     bubble1.classList.add('swapped');
                     bubble2.classList.add('swapped');
+
+                    // Color bubbles
+                    if(b1Inner) {
+                        b1Inner.classList.remove('bg-white/10', 'border-white/20', 'text-gray-400');
+                        b1Inner.classList.add('bg-cyber-purple/20', 'border-cyber-purple/50', 'text-white', 'shadow-[0_0_20px_rgba(147,51,234,0.4)]');
+                    }
+                    if(b2Inner) {
+                        b2Inner.classList.remove('bg-white/10', 'border-white/20', 'text-gray-400');
+                        b2Inner.classList.add('bg-cyber-red/20', 'border-cyber-red/50', 'text-white', 'shadow-[0_0_20px_rgba(236,72,153,0.4)]');
+                    }
                 } else {
                     // Hide text and name
                     holaText.classList.remove('opacity-100', 'translate-x-0');
@@ -105,12 +122,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     profileName.classList.remove('opacity-100', 'translate-x-0');
                     profileName.classList.add('opacity-0', 'translate-x-10');
 
+                    // Revert Image opacity on mobile
+                    profileImageContainer.classList.add('opacity-40');
+                    profileImageContainer.classList.remove('opacity-100');
+
                     // Reset bubbles
                     bubble1.classList.remove('swapped');
                     bubble2.classList.remove('swapped');
+
+                    // Reset bubble colors
+                    if(b1Inner) {
+                        b1Inner.classList.add('bg-white/10', 'border-white/20', 'text-gray-400');
+                        b1Inner.classList.remove('bg-cyber-purple/20', 'border-cyber-purple/50', 'text-white', 'shadow-[0_0_20px_rgba(147,51,234,0.4)]');
+                    }
+                    if(b2Inner) {
+                        b2Inner.classList.add('bg-white/10', 'border-white/20', 'text-gray-400');
+                        b2Inner.classList.remove('bg-cyber-red/20', 'border-cyber-red/50', 'text-white', 'shadow-[0_0_20px_rgba(236,72,153,0.4)]');
+                    }
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.15 });
 
         holaObserver.observe(holaSection);
     }

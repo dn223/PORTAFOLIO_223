@@ -197,12 +197,12 @@ body {
 
 /* Floating Animations for Bubbles */
 @keyframes floatBubble1 {
-    0%, 100% { margin-top: 0; }
-    50% { margin-top: -15px; }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 @keyframes floatBubble2 {
-    0%, 100% { margin-top: 0; }
-    50% { margin-top: 15px; }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
 }
 .floating-animation-1 {
     animation: floatBubble1 4s ease-in-out infinite;
